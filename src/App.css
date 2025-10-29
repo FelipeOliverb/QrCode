@@ -1,33 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  background-color: #0e0e0e;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+
 .app-container {
-  text-align: center;   
-  padding: 20px;
-  color: aliceblue;
+  background-color: #141414;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+  padding: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  width: fit-content;
+  max-width: 90%;
   gap: 20px;
-  margin: 0 auto;
-  margin-top: 5vh;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
 }
 
 
-input {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  width: 300px;
+.app-container h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #00bfff;
+  margin-bottom: 10px;
 }
 
-.titulo {
-  font-size: 20px;
-  font-family: 'Courier New', Courier, monospace;
+
+.EscolhaLogo h1 {
+  font-size: 1.2rem;
+  color: #ddd;
+  margin-top: 20px;
 }
 
-body, html, #root {
-  background-color: #2e2e2e; 
-  margin: 0;
-  padding: 0;
-  height: 100%;
+input[type="text"] {
+  padding: 12px 15px;
+  width: 280px;
+  border: 2px solid #00bfff;
+  border-radius: 8px;
+  background-color: #1f1f1f;
+  color: #ffffff;
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #0096c7;
+  box-shadow: 0 0 8px rgba(0, 191, 255, 0.4);
+}
+
+input[type="file"] {
+  background-color: #00bfff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+input[type="file"]:hover {
+  background-color: #0096c7;
+}
+
+.app-container canvas {
+  margin-top: 20px;
+  border: 5px solid #00bfff;
+  border-radius: 12px;
+  background-color: white;
+}
+
+/* Responsividade */
+@media (max-width: 500px) {
+  .app-container {
+    width: 90%;
+    padding: 25px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+
+  .app-container h1 {
+    font-size: 1.5rem;
+  }
 }
