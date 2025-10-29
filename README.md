@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -71,3 +72,7 @@ export default defineConfig([
   },
 ])
 ```
+=======
+# QrCode
+Gerador de Qr Code
+>>>>>>> 9dd02ef0515f0a2417fd7d58cdf1bf7c713bae42
